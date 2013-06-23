@@ -1,4 +1,1 @@
-amezhenin.github.com
-====================
-
-My public blog
+my blog
