@@ -11,7 +11,7 @@ pygments: true
 #
 title : millisecond matters
 tagline: 
-#author: Artem Mezhenin
+author: 
   name : Artem Mezhenin
   email : a.mezhenin@gmail.com
   github : amezhenin
