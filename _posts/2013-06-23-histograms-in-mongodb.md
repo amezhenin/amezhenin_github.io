@@ -12,13 +12,41 @@ tags: [mongodb, profiling, administration]
 
 Порыскав по просторам рунета я, к своему удивлению, обнаружил большие пробелы 
 в практических аспектах применения такой замечательно базе данных, как 
-(MongoDB)[2]. На страницах изданий и интернет ресурсах эта БД появляется 
+[MongoDB](http://www.mongodb.org/). На страницах изданий и интернет ресурсах эта БД появляется 
 регулярно, есть даже люди, которые давно и успеошно применяют её в смоих 
 проектах, но статьи и советы по правктическому примерению этой базы на 
 продакшене впору заносить в красную книгу. Этам постом я попытаюсь пролить свет
 на профилирование MongoDB и поделюсь некоторыми набросками кода.
 
-# Зачем
+# Мониторинг
+
+Проще всего начать с команд по управлению задачами: 
+[db.currentOp](http://docs.mongodb.org/manual/reference/method/db.currentOp/) и
+[db.killOp](http://docs.mongodb.org/manual/reference/method/db.killOp/). 
+
+
+# Профилирование
+
+db.help()
+
+db.getProfilingStatus() - returns if profiling is on and slow threshold
+db.setProfilingLevel(level,<slowms>) 0=off 1=slow 2=all
+
+как включить
+где смотреть(какой размер capped коллекции)
+какая структура у документов
+как сделать гистограмму
+гисторграмма с разбивкой по типам операций
+как подключить скрипт с js при старте консоли
+
+
+http://docs.mongodb.org/manual/tutorial/manage-the-database-profiler/
+http://docs.mongodb.org/manual/reference/command/profile/ 
+
+
+
+
+
 
 db.system.profile.aggregate([{$project: {'ms':{'$subtract':['$millis',{$mod:['$millis', 50]}]}}}, {$group:{_id:'$ms', sum:{$sum:1}}}, {$sort:{_id:1}}]) 
 { 
@@ -76,5 +104,3 @@ Out[3]: [(1, 'a'), (2, 'b'), (3, 'c')]
 3650 	 2 
 
 
-[1] http://docs.mongodb.org/manual/reference/command/profile/
-[2] http://www.mongodb.org/
