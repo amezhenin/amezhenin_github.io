@@ -7,11 +7,13 @@ tags: [mongodb, profiling, administration]
 ---
 {% include JB/setup %}
 
+
+<link rel="stylesheet" href="/pygments.css"/>
+
 # дать краткое содержание статьи, о чем пойдет речь.
 
-# ссылки на все части 
-
 ### Увеличиваем размер system.profile (Перечитать)
+
 Выше я упоминал, что данная коллекция имеет ограничение в 1Мб. Это значение можно изменить, если вам кажется, что вам нужен больший объем лога. Сделать это можно следующим образом: так как **system.profile** является ограниченной коллекцией мы не можем извенить размер зарезервированного под неё места, но мы можем пересоздать её с другими опциями. Вот пример консольных комад:
 
     db.setProfilingLevel(0)    // останавливаем профилирование
@@ -153,7 +155,7 @@ tags: [mongodb, profiling, administration]
     
 *Я всегда использую `$limit` в конце pipeline'a при разработке сложных агрегаций. Это позволяет контролировать выходные данные на каждом из этапов, не перегружая консоль лишней информацией.*
 
-Осталось только сгруппировать данные 
+Осталось только сгруппировать данные по `ms` и подсчитать количество:
     
     db.system.profile.aggregate([{$project: {'ms':{'$subtract':['$millis',{$mod:['$millis', 50]}]}}}, {$group:{_id:'$ms', sum:{$sum:1}}}, {$sort:{_id:1}}]) 
     { 
@@ -179,11 +181,22 @@ tags: [mongodb, profiling, administration]
     	"ok" : 1 
     } 
 
+С помощю одного такого запроса мы можем быстро понять распределение запросов по времени выполнения. Хранить в голове этот код накладно, давайте автоматизируем процесс. Для начала, создадим файл **profile.js** и пропишем в него нашу функцию с агрегацией и форматирование вывода, вот так:
+        
+    {% highlight javascript %}
+function profile_hist(){
+    res = db.system.profile.aggregate([{$project: {'ms':{'$subtract':['$millis',{$mod:['$millis', 50]}]}}}, {$group:{_id:'$ms', sum:{$sum:1}}}, {$sort:{_id:1}}]);
+    res['result'].forEach(function(i) { print(i['_id'], '\t',i['sum']); });
+}
+    {% endhighlight %}
 
+Подгрузим этот файл при запуске консоли MongoDB:
+    
+    $ mongo [db_name] --shell profile.js
 
-но нам интереснее увидеть это в консоли …
-
-    ['result'].forEach(function(i) { print(i['_id'], '\t',i['sum']); });
+Теперь можно запустить функцию `profile_hist`:
+    
+    > profile_hist()
     100 	 2981 
     150 	 536 
     200 	 44 
@@ -191,26 +204,51 @@ tags: [mongodb, profiling, administration]
     300 	 12 
     350 	 7 
     400 	 1 
-    450 	 2 
-    500 	 3 
-    550 	 2 
-    600 	 1 
-    650 	 5 
-    700 	 1 
-    750 	 3 
-    800 	 3 
-    850 	 3 
+    ... 
     900 	 1 
     1750 	 1 
     3500 	 7 
     3600 	 1 
     3650 	 2 
 
-* общая гистограмма по времени
-* как засунуть все в js файл и подключать при старте
-* http://docs.mongodb.org/manual/reference/operator/comment/#op._S_comment -- комменты, что бы различать операции в профайлере 
-* выложить дамп system.profile с инструкцией по восстановлению в пост для тех у кого своей нет. js+dump сохранить в репозитории
+Аналогичным образом можно "причесать" и предыдущие два примера, дописав еще две функции в `profile.js`:
+    
+    function profile_ns(){
+    
+        res = db.system.profile.aggregate([{$group:{_id:'$ns', count:{$sum:1}, avg_ms:{$avg:'$millis'}, min_ms:{$min:'$millis'}, max_ms:{$max:'$millis'}}}])
+        print('ns                   min_ms              max_ms          avg_ms          count           total_ms')
+        res['result'].forEach(function(i) {
+            ns = i['_id'].substr(0,17);
+            ns = ns + Array(20 - ns.length+1).join(" ")
+            print(ns,i['min_ms'],'\t\t',i['max_ms'],'\t\t',Math.round(i['avg_ms']),'\t\t',i['count'],'\t\t',Math.round(i['count']*i['avg_ms'])); });
+    }
+    
+    function profile_op(){
+    
+        res = db.system.profile.aggregate([{$group:{_id:'$op', count:{$sum:1}, avg_ms:{$avg:'$millis'}, min_ms:{$min:'$millis'}, max_ms:{$max:'$millis'}}}])
+        print('op                   min_ms              max_ms          avg_ms          count           total_ms')
+        res['result'].forEach(function(i) {
+            ns = i['_id'].substr(0,17);
+            ns = ns + Array(20 - ns.length+1).join(" ")
+            print(ns,i['min_ms'],'\t\t',i['max_ms'],'\t\t',Math.round(i['avg_ms']),'\t\t',i['count'],'\t\t',Math.round(i['count']*i['avg_ms'])); });
+    }
 
+Финальную версию файла можно скачать [здесь](/files/profile.js).
+
+### Профилирование с комментариями
+
+* http://docs.mongodb.org/manual/reference/operator/comment/
+* в каких драйверах есть поддержка
+* в профайлере будет:
+
+        "query" : {
+            "query" : {
+            			
+            },
+            "$comment" : "my comment"
+        },
+* http://docs.mongodb.org/manual/reference/operator/comment/#op._S_comment -- комменты, что бы различать операции в профайлере 
+        
 
 
 ## Заключение
@@ -222,3 +260,6 @@ tags: [mongodb, profiling, administration]
 * http://docs.mongodb.org/manual/tutorial/manage-the-database-profiler/
 * http://docs.mongodb.org/manual/reference/command/profile/ 
 * http://jsman.ru/mongo-book/Glava-7-Proizvoditelnost-i-instrumentarij.html
+
+
+
