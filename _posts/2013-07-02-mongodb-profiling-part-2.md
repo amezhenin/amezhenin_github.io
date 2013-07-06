@@ -10,7 +10,6 @@ tags: [mongodb, profiling, administration]
 
 <link rel="stylesheet" href="/pygments.css"/>
 
-# дать краткое содержание статьи, о чем пойдет речь.
 
 ### Увеличиваем размер system.profile (Перечитать)
 
@@ -237,24 +236,37 @@ function profile_hist(){
 
 ### Профилирование с комментариями
 
-* http://docs.mongodb.org/manual/reference/operator/comment/
-* в каких драйверах есть поддержка
-* в профайлере будет:
+Начиная с версии 2.0.0 MongoDB появилась команда [$comment](http://docs.mongodb.org/manual/reference/operator/comment/), которая позволяет добавлять комментарий к запросу:
 
-        "query" : {
-            "query" : {
-            			
-            },
-            "$comment" : "my comment"
-        },
-* http://docs.mongodb.org/manual/reference/operator/comment/#op._S_comment -- комменты, что бы различать операции в профайлере 
+    db.collection.find( { <query> } )._addSpecial( "$comment", <comment> )
+    db.collection.find( { $query: { <query> }, $comment: <comment> } )
+    
+Все документы в **system.profile** для запросов с такими комментариями будут выглядеть иначе:
+
+    > db.test_coll.find()._addSpecial("$comment", 'test comment') 
+    > db.system.profile.find()
+    {
+        ...
+        "ns" : "test.test_coll",
+        "query" : { "query" : { }, "$comment" : "test comment" },
+        // без $comment было бы просто: "query" : {}
+        ...
+    }
+    
+    
+Я не использовал на практике подобные конструкции, но в некоторых случаях эти комментарии могут оказаться полезными. В [своем блоге](http://emptysqua.re/blog/mongo-profiling-hacks/), A. Jesse Jiryu Davis(*прим.: один из разработчиков драйвера pymongo и автор драйвера [motor](http://motor.readthedocs.org/en/stable/)*) показывает один из вариантов применения этой команды на практике.
         
 ### Профилирование и шардинг
 
-**
+В настоящее время, профилирование нельзя настроить через `mongos`:
 
-* профилирование нельзя включить через `mongos`
-* отправлять запросы через `mongos` тоже нельзя
+    $ mongos
+    mongos> db.setProfilingLevel(1, 100);
+    { "ok" : 0, "errmsg" : "profile currently not supported via mongos" }
+    
+Мне не удалось найти полноценного решения для профилирование шардинг-кластера(*sharded cluster*). Можно настроить профилирование на каждой ноде в отдельности. К сожалению, в этом случае  также придется оправшивать профайлер каждой ноды в отдельности. Это очень не удобно,  даже если у вас немного серверов. 
+
+Если у вас есть решение для этой проблемы, пожалуйста, дайте мне знать :)
 
 ## Заключение
 В статье не рассмотрены `mongostat`, `mongotop`, `explain`, [db.currentOp](http://docs.mongodb.org/manual/reference/method/db.currentOp/) и
@@ -266,5 +278,10 @@ function profile_hist(){
 * http://docs.mongodb.org/manual/reference/command/profile/ 
 * http://jsman.ru/mongo-book/Glava-7-Proizvoditelnost-i-instrumentarij.html
 
+----------
 
-
+* введение, дать краткое содержание статьи, о чем пойдет речь.
+* заключение
+* ссылки
+* перечитать
+* проспелить
