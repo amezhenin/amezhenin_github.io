@@ -249,7 +249,12 @@ function profile_hist(){
         },
 * http://docs.mongodb.org/manual/reference/operator/comment/#op._S_comment -- комменты, что бы различать операции в профайлере 
         
+### Профилирование и шардинг
 
+**
+
+* профилирование нельзя включить через `mongos`
+* отправлять запросы через `mongos` тоже нельзя
 
 ## Заключение
 В статье не рассмотрены `mongostat`, `mongotop`, `explain`, [db.currentOp](http://docs.mongodb.org/manual/reference/method/db.currentOp/) и
