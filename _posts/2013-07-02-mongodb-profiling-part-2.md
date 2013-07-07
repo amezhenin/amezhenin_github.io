@@ -2,22 +2,49 @@
 layout: post
 title: "Профилирование MongoDB. Часть 2"
 description: ""
-category: 
-tags: [mongodb, profiling, administration]
+category: mongodb
+tags: [mongodb, profiling]
 ---
 {% include JB/setup %}
+
+<style>
+    .fig {
+        #text-align: center;
+        margin-bottom: 30px;
+    }
+    .spoiler .spoiler_title {
+    color: darkblue;
+    border-bottom: dotted 1px;    
+    cursor: pointer;
+}
+
+.spoiler .spoiler_text {
+    display: none;
+}
+</style>
 
 
 <link rel="stylesheet" href="/pygments.css"/>
 
+<p class="fig">
+<a href="http://www.flickr.com/photos/advancedphotonsource/5941453764/" target="_blank">
 
-### Увеличиваем размер system.profile (Перечитать)
+<img src="/images/advanced.jpg" alt="monitoring" style="width: 100%;" align='center'/>
+</a>
+</p>
 
-Выше я упоминал, что данная коллекция имеет ограничение в 1Мб. Это значение можно изменить, если вам кажется, что вам нужен больший объем лога. Сделать это можно следующим образом: так как **system.profile** является ограниченной коллекцией мы не можем извенить размер зарезервированного под неё места, но мы можем пересоздать её с другими опциями. Вот пример консольных комад:
+
+
+
+В этой части я опишу несколько продвинутых способов построения запросов к профайлеру и покажу как можно автоматизировать типовые операции получения метрик о выполнении операций. Начну я с того, как можно увеличить размер лога профайлера, что бы можно было хранить историю за больший период времени.
+
+### Увеличиваем размер system.profile
+
+В прошлой части я упоминал, что данная коллекция имеет ограничение в 1Мб. Это значение можно изменить, если вам нужен больший объем лога. Сделать это можно следующим образом: так как **system.profile** является ограниченной коллекцией, мы не можем изменить размер зарезервированного под неё места, но мы можем пересоздать её с другими опциями. Вот пример консольных команд:
 
     db.setProfilingLevel(0)    // останавливаем профилирование
-    db.system.profile.drop()    // удалем коллекцию
-    // создаем ограниченную коллкуцию с нужными параметрами
+    db.system.profile.drop()    // удаляем коллекцию
+    // создаем ограниченную коллекцию с нужными параметрами
     db.createCollection( "system.profile", { capped: true, size:4000000 } )   
     db.setProfilingLevel(1)    // включаем профилирование назад
    
@@ -26,7 +53,7 @@ tags: [mongodb, profiling, administration]
 
 ### Продвинутые запросы
 
-На стадии поддержки гораздо важнее видеть общую картину, чем анализировать отдельные запросы. Например, можно следить за количеством "проблемных" запросов(*count*) в интервал времени и средним временем выполнения(*avg_ms*):
+На стадии поддержки гораздо важнее видеть общую картину, чем анализировать отдельные запросы. Например, можно следить за количеством "проблемных" запросов(*count*) в определенный день и средним временем выполнения(*avg_ms*):
 
     > db.system.profile.aggregate([{$match: {ts:{$gte:ISODate("2013-06-29T00:00:00.000Z"), $lt:ISODate("2013-06-30T00:00:00.000Z")}}}, {$group:{_id:null, count:{$sum:1}, avg_ms:{$avg:'$millis'}}}])
     {
@@ -42,7 +69,7 @@ tags: [mongodb, profiling, administration]
 
 *Здесь и далее я буду использовать [Aggregation Framework](http://docs.mongodb.org/manual/core/aggregation/) для написания запросов.*    
 
-Несмотря на то, что нет практического смысла в измерении "средней темпераруры по больнице", этот пример демострирует основную идею для постороения различных метрик. 
+Несмотря на то, что нет практического смысла в измерении "средней температуры по больнице", этот пример демонстрирует основную идею для построения различных метрик. 
 
 Давайте для начала сгруппируем по типам операций и добавим еще пару метрик:
 
@@ -124,7 +151,7 @@ tags: [mongodb, profiling, administration]
 
 ##### Гистограммы по времени выполнения запросов
 
-Этот пример по-сложнее: нужно посчитать гистограмму по времени выполнения запросов. В для постронения гистограммы я выбрал шаг в 50 миллисекунд. Что бы проще было группировать, я сначала получаю остаток отделеня(`$mod`) `millis` на 50, а потом вычитаю(`$subtract`) полученное значение из `millis`. В плевдокоде это просто:
+Этот пример по-сложнее: нужно посчитать гистограмму по времени выполнения запросов. Для построения гистограммы я выбрал шаг в 50 миллисекунд. Что бы проще было группировать, я сначала получаю остаток от деленя(`$mod`) **millis** на 50, а потом вычитаю(`$subtract`) полученное значение из **millis**. В псевдокоде это просто:
 
     millis = millis - (millis % 50)
 
@@ -180,7 +207,9 @@ tags: [mongodb, profiling, administration]
     	"ok" : 1 
     } 
 
-С помощю одного такого запроса мы можем быстро понять распределение запросов по времени выполнения. Хранить в голове этот код накладно, давайте автоматизируем процесс. Для начала, создадим файл **profile.js** и пропишем в него нашу функцию с агрегацией и форматирование вывода, вот так:
+С помощью одного такого запроса мы можем быстро понять распределение запросов по времени выполнения. 
+
+Хранить в голове этот код накладно, давайте автоматизируем процесс. Для начала, создадим файл **profile.js** и добавим в него функцию с агрегацией и форматирование вывода, вот так:
         
     {% highlight javascript %}
 function profile_hist(){
@@ -236,7 +265,7 @@ function profile_hist(){
 
 ### Профилирование с комментариями
 
-Начиная с версии 2.0.0 MongoDB появилась команда [$comment](http://docs.mongodb.org/manual/reference/operator/comment/), которая позволяет добавлять комментарий к запросу:
+Начиная с версии 2.0.0 в MongoDB появилась команда [$comment](http://docs.mongodb.org/manual/reference/operator/comment/), которая позволяет добавлять комментарий к запросу:
 
     db.collection.find( { <query> } )._addSpecial( "$comment", <comment> )
     db.collection.find( { $query: { <query> }, $comment: <comment> } )
@@ -264,24 +293,14 @@ function profile_hist(){
     mongos> db.setProfilingLevel(1, 100);
     { "ok" : 0, "errmsg" : "profile currently not supported via mongos" }
     
-Мне не удалось найти полноценного решения для профилирование шардинг-кластера(*sharded cluster*). Можно настроить профилирование на каждой ноде в отдельности. К сожалению, в этом случае  также придется оправшивать профайлер каждой ноды в отдельности. Это очень не удобно,  даже если у вас немного серверов. 
+Можно настроить профилирование на каждой ноде в отдельности. К сожалению, в этом случае  также придется опрашивать профайлер каждой ноды в отдельности. Это очень не удобно,  даже если у вас 2-3 шарда. 
 
-Если у вас есть решение для этой проблемы, пожалуйста, дайте мне знать :)
+Решение, которое автоматизирует этот процесс, можно посмотреть [здесь](http://emptysqua.re/blog/real-time-profiling-a-mongodb-cluster/).
 
 ## Заключение
-В статье не рассмотрены `mongostat`, `mongotop`, `explain`, [db.currentOp](http://docs.mongodb.org/manual/reference/method/db.currentOp/) и
-[db.killOp](http://docs.mongodb.org/manual/reference/method/db.killOp/). 
-команд по управлению задачами
+Существует множество способов выявления и устранения проблем в MongoDB, и профилирование только один из них. В статье не рассмотрены такие замечательные инструменты как [mongostat](http://docs.mongodb.org/manual/reference/program/mongostat/), [mongotop](http://docs.mongodb.org/manual/reference/program/mongotop/), [explain](http://docs.mongodb.org/manual/reference/method/cursor.explain/), [db.currentOp](http://docs.mongodb.org/manual/reference/method/db.currentOp/)+[db.killOp](http://docs.mongodb.org/manual/reference/method/db.killOp/) и [другие](http://docs.mongodb.org/manual/reference/program/). Эти команды и утилиты помогут вам лучше понять как работает ваша БД.
 
-#### Links
-* http://docs.mongodb.org/manual/tutorial/manage-the-database-profiler/
-* http://docs.mongodb.org/manual/reference/command/profile/ 
-* http://jsman.ru/mongo-book/Glava-7-Proizvoditelnost-i-instrumentarij.html
+#### Дополнительные ссылки
+* [The Little MongoDB Book. Глава 7 — Производительность и инструментарий] (http://jsman.ru/mongo-book/Glava-7-Proizvoditelnost-i-instrumentarij.html)
+* [Следим за коллекцией. Tailable cursors](http://habrahabr.ru/post/173653/)
 
-----------
-
-* введение, дать краткое содержание статьи, о чем пойдет речь.
-* заключение
-* ссылки
-* перечитать
-* проспелить
