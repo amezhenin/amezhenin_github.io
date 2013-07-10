@@ -1,12 +1,18 @@
 ---
-layout: page
-title: 
+layout: index
+title: Блог Меженина Артёма
 tagline:
 published: true
 ---
 
 {% include JB/setup %}
 
+  <style>
+   span:empty {
+    margin-left: 10px;
+    display: inline-block;
+   }
+  </style>
 
 <ul class="posts">
   {% for post in site.posts %}
