@@ -3,7 +3,7 @@ layout: post
 title: "Как получить размер массива в Aggregation Framework"
 description: ""
 category: mongodb
-tags: [mongodb, aggregation framework]
+tags: [mongodb, aggregation framework, snippets]
 ---
 {% include JB/setup %}
 
