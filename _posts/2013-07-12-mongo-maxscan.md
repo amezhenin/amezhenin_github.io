@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mongo $maxScan: делаем поиск без индекса"
+title: "MongoDB maxScan: делаем поиск без индекса"
 description: ""
 category: mongodb
 tags: [mongodb, snippets]
