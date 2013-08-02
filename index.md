@@ -1,6 +1,6 @@
 ---
 layout: index
-title: Blog
+title: Блог Меженина Артема
 tagline:
 published: true
 ---
