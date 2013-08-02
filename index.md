@@ -1,6 +1,6 @@
 ---
 layout: index
-title: Блог Меженина Артёма
+title: Blog
 tagline:
 published: true
 ---
@@ -15,7 +15,17 @@ published: true
   </style>
 
 <ul class="posts">
+<table>
+  
   {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+  <tr>
+    <td><li><span>{{ post.date | date: "%B" }}&nbsp;</span></li></td>
+    <td><span>{{ post.date | date: "%Y" }}</span></td>
+    <td>&raquo;&nbsp;</td> 
+    <td><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></td>
+  </tr>
   {% endfor %}
+</table>
 </ul>
+
+
