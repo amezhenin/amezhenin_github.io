@@ -3,7 +3,7 @@ layout: post
 title: "Профилирование MongoDB. Часть 1"
 description: ""
 category: mongodb
-tags: [mongodb, profiling]
+tags: [mongodb, profiling, devops]
 ---
 {% include JB/setup %}
 
