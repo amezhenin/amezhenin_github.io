@@ -66,3 +66,5 @@ tags: [mongodb, aggregation framework, snippets]
     }
 
 **При больших размерах выбоки, разворачивать и сворачивать каждый массив может быть накладно.**
+
+**UPD.** В MongoDB начиная с версии 2.6 будет доступна команда [$size](http://docs.mongodb.org/master/reference/operator/aggregation/size/).
