@@ -261,7 +261,7 @@ function profile_hist(){
             print(ns,i['min_ms'],'\t\t',i['max_ms'],'\t\t',Math.round(i['avg_ms']),'\t\t',i['count'],'\t\t',Math.round(i['count']*i['avg_ms'])); });
     }
 
-Финальную версию файла можно скачать [здесь](/files/profile.js).
+Финальную версию файла можно скачать [здесь](https://gist.github.com/amezhenin/8132687).
 
 ### Профилирование с комментариями
 
