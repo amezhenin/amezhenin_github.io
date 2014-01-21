@@ -9,6 +9,7 @@ published: false
 {% include JB/setup %}
 
 * meta-классы в питоне
+* Python class decorators
 * __slots__ для экономии память
 * multithreadint and multiprocessing
 * with - менеджеры контекста
