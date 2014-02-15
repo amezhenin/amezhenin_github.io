@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Мой первый Pull Request"
+title: "Первый Pull Request - он трудный самый!"
 description: ""
 category: python
 tags: [python, open source]
