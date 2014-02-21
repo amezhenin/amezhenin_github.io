@@ -4,7 +4,7 @@ title: "О чем спросить питониста"
 description: ""
 category: python
 tags: [python, interview]
-
+published: false
 ---
 {% include JB/setup %}
 
