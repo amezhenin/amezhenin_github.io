@@ -30,14 +30,16 @@ published: false
 
 *... как это сделал я!*
 
-
-
-
 ## Декораторы методов и классов в Python
 
-в попытке сорвать *покровы таинственности* 
+Декораторы - это  от наследования
+* Хабр [1](http://habrahabr.ru/post/141411/) [2](http://habrahabr.ru/post/141501/)
+* Я бы отдал предпочтение [этой статье](https://www.jeffknupp.com/blog/2013/11/29/improve-your-python-decorators-explained/) *by Jeff Knupp*, если английский ваш второй язык))
+* Про декораторы классов информации крайне мало, хотя они мало чем отличаются от декораторов методов и функций.
 
-* отличие декораторов от наследования
+## yeild
+
+* Опять же *Jeff Knupp*  написал [отличную статью](http://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/) на эту тему 
 
 ## \_\_slots\_\_ для экономии память
 
