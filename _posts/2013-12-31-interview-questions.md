@@ -7,6 +7,7 @@ tags: [python, interview]
 published: false
 ---
 {% include JB/setup %}
+<link rel="stylesheet" href="/pygments.css"/>
 
 Пару месяца назад я сменил работу в московском офисе на удаленную работу в зарубежной компании [Toptal](http://www.toptal.com/?ref=12369). Это был абсолютно новый для меня опыт, потому что мне еще не доводилось работать с американскими клиентами. Больше всего меня беспокоил языковой барьер, но по прошествии времени могу сказать, что навыки коммуникации быстро приобретаются при наличии практики и желания.
 
@@ -38,11 +39,39 @@ published: false
 * Я бы отдал предпочтение [этой статье](https://www.jeffknupp.com/blog/2013/11/29/improve-your-python-decorators-explained/) *by Jeff Knupp*, если английский ваш второй язык))
 * Про декораторы классов информации крайне мало, хотя они мало чем отличаются от декораторов методов и функций.
 
-## yeild
+## Генераторы, итераторы и оператор yeild
 
-* Опять же *Jeff Knupp*  написал [отличную статью](http://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/) на эту тему 
+* Опять же *Jeff Knupp*  написал [отличную статью](http://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/) на эту тему. 
+* Старая, но еще актуальная статья [на Хабре](http://habrahabr.ru/post/132554/). 
 
 ## \_\_slots\_\_ для экономии память
+
+В [одном месте](http://inn.ru/) меня спросили про то, как можно съэкономить память при создании множества однотипных объектов. Как выяснилось, речь шла о переменной класса **\_\_slots\_\_**. Статей тольковых про **\_\_slots\_\_** я не встречал, потому что на практике это редко встречается.
+
+Суть **\_\_slots\_\_** можно продемонстрировать следующим примером:
+
+{% highlight python %}
+
+    class Foo:
+        __slots__ = ['x']
+        def __init__(self, n):
+            self.x = n
+    
+    y = Foo(1)
+    print y.x  # prints "1"
+    y.x = 2
+    print y.x  # prints "2"
+    y.z = 4    # Throws exception.
+    print y.z
+
+{% endhighlight %}
+
+Этот массив жестко закрепляем список аттрибутов экземпляра класса, и мы не можем добавить новые в процессе использоватия. Это похволяет интерпретатору оптимизировать объем памяти занимаемый экземпляром класса. Вот что есть из доступных статей:
+
+* [Saving 9 GB of RAM with Python’s \_\_slots\_\_](http://tech.oyster.com/save-ram-with-python-slots/)
+* [Официальная документация](http://docs.python.org/2/reference/datamodel.html#slots)
+
+Помимо **\_\_slots\_\_** есть еще [named tuples](http://docs.python.org/2/library/collections.html#collections.namedtuple). Такой подход более распространен, но
 
 ## multithreadint and multiprocessing
 ## Что такое менеджеры контекста и как ими пользоваться?
