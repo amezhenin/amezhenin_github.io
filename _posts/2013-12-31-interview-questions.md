@@ -71,19 +71,34 @@ published: false
 * [Saving 9 GB of RAM with Python’s \_\_slots\_\_](http://tech.oyster.com/save-ram-with-python-slots/)
 * [Официальная документация](http://docs.python.org/2/reference/datamodel.html#slots)
 
-Помимо **\_\_slots\_\_** есть еще [named tuples](http://docs.python.org/2/library/collections.html#collections.namedtuple). Такой подход более распространен, но
+Помимо **\_\_slots\_\_** есть еще [named tuples](http://docs.python.org/2/library/collections.html#collections.namedtuple). Такой подход более распространен.
 
-## multithreadint and multiprocessing
+## Модули threading and multiprocessing
+
+Вопросы про потоки и процессы я слышал неоднократно, поэтому советую 
+обратить на него особое внимание. Вопрос состоит из двух частей: понимание
+потоком и процессов в Unix в целом и интерфейс для работы с ними в Python. 
+
+Unix лучше изучить весь и стразу, потому что фундоментальные знания тоже очень
+важны. На английском языке могу посоветовать [Linux System Programming: Talking Directly to the Kernel and C Library](http://www.amazon.com/Linux-System-Programming-Talking-Directly/dp/1449339530), эта книга имеет вменяемый объем и покрывает все основные 
+аспекты.
+
+Об интерфейсах в Python лучше читать в официальной документации:
+
+* [16.2. threading — Higher-level threading interface](http://docs.python.org/2/library/threading.html)
+* [16.6. multiprocessing — Process-based “threading” interface](http://docs.python.org/2/library/multiprocessing.html)
+
+## В чем отличие open and fopen?
+
+Опять вопрос из области системного прораммирования. 
+буфферизованное и небуфферизованное чтение
+user-space and kernel-space
+Ссылка на книгу по системному программированию
+
 ## Что такое менеджеры контекста и как ими пользоваться?
 
 with - 
 отправка сообщений через send
-
-## В чем отличие open and fopen?
-
-буфферизованное и небуфферизованное чтение
-user-space and kernel-space
-Ссылка на книгу по системному программированию
 
 ## Какие структуры данных в питоне вы знаете и применяли на практике?
 
