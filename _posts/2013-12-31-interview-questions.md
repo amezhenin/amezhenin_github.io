@@ -22,7 +22,7 @@ published: false
 Я, пожалуй, не буду копировать *Интернеты* и просто оставлю здесь несколько ссылок (*потому что мне больно говорить об этом*) :
 
 * Первым на помощь нам спешит **Хабр**: [Метаклассы в Python](http://habrahabr.ru/post/145835/)
-* **Хабровчане** по своей старой привычке не указывают ссылки на оригиналы статьей, которые они переводят. Вот она: [All about the metaclasses in Python!](http://freepythontips.wordpress.com/2013/09/20/all-about-the-metaclasses-in-python/)
+* **Хабровчане** по своей старой привычке не указывают ссылки на оригиналы статьей. Вот она: [All about the metaclasses in Python!](http://freepythontips.wordpress.com/2013/09/20/all-about-the-metaclasses-in-python/)
 * А началось все с [вопроса](http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python) на [StackOverflow](http://stackoverflow.com/)!
 
 *Да, и не путайте meta-классы в Питоне с [классом Meta в Django](https://docs.djangoproject.com/en/dev/topics/db/models/#meta-options)...*
@@ -104,13 +104,22 @@ with -
 
 list, dict, set, deque + Python3 stricts), область их применения и сложность операци(О(?)
 
+Если говорить о более продвинутых структурах данных, то могу порекомендовать [эту статью](http://pypix.com/python/advanced-data-structures-python/).
+
 ## Что нового в Python 3?
 отличия от 2, опыт миграции кода
 
-## Цепи маркова(driveling link)
+## Цепи маркова и машинное обучение
+
+На собеседовании в [Mail.RU](http://mail.ru/) меня попросили написать *генератор бреда*. Для этого нужно было использовать [Цепи Маркова](http://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BF%D1%8C_%D0%9C%D0%B0%D1%80%D0%BA%D0%BE%D0%B2%D0%B0) N-го порядка. С проектом я успешно справился и даже выложил его в [открытый доступ](https://github.com/amezhenin/driveling). 
+
+Это был самый запоминающий проект, ведь на каждый день интересуются твоими знаниями в машинном обучении и теории вероятности.
+
+К питону это пункт не имеет прямого отношения, так что решайте сами, интересно вам это или нет. Тема довольно обширная и парой ссылок на статьи тут не отделаешь - нужны фундаментальные знания. 
+
 ## Протокол HTTP(спецификация) 
 
-rfc2616
+* [RFC2616](https://www.ietf.org/rfc/rfc2616.txt)
 
 
 == Cracking coding interview - book
