@@ -23,7 +23,9 @@ published: false
 
 * Первым на помощь нам спешит **Хабр**: [Метаклассы в Python](http://habrahabr.ru/post/145835/)
 * **Хабровчане** по своей старой привычке не указывают ссылки на оригиналы статьей. Вот она: [All about the metaclasses in Python!](http://freepythontips.wordpress.com/2013/09/20/all-about-the-metaclasses-in-python/)
+* Очень хороша статья на PyPix: [Metaprogramming in Python](http://pypix.com/python/metaprogramming-python/), она посвежее и лучше оформленна, а в конце есть множество ссылок на другие статьи по данной теме.
 * А началось все с [вопроса](http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python) на [StackOverflow](http://stackoverflow.com/)!
+
 
 *Да, и не путайте meta-классы в Питоне с [классом Meta в Django](https://docs.djangoproject.com/en/dev/topics/db/models/#meta-options)...*
 
