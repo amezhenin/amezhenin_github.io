@@ -160,6 +160,7 @@ Unix лучше изучить весь и стразу, потому что ф�
 
 * [Get with the program as contextmanager](http://jessenoller.com/blog/2009/02/03/get-with-the-program-as-contextmanager-completely-different)
 * [The Python "with" Statement by Example](http://preshing.com/20110920/the-python-with-statement-by-example/)
+* **UPD.** [Context Managers in Python](http://pypix.com/python/context-managers/)
 
 ## Какие структуры данных в питоне вы знаете и применяли на практике?
 
