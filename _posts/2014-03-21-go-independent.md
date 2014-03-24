@@ -14,7 +14,7 @@ published: false
 
 In stressful times, I often look back fondly at my days in a large corporation. I was nestled in both my own office or cubicle and a thick, fluffy, layered hierarchy of management. It was a joke to us then, but in a big company a smart person could get by with hardly getting *anything* done. In most cases, if a project didn’t get done, there were enough people sharing the blame at enough layers that it was hard to figure out where things went wrong. And that’s just for failures. If things took longer than they could have, the complexity of the organization obscured the reasons to a point that nobody really had a clue how long any project should take to get done.
 
-В тяжелые времена, я с любовью вспоминаю на славные деньки в крупной компании.
+В напряженные моменты, я с любовью вспоминаю на славные деньки в крупной компании.
 
 
 So, on a day when you don’t feel like really putting the pedal to the
