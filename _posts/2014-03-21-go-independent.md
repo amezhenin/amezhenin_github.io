@@ -14,13 +14,14 @@ published: false
 
 In stressful times, I often look back fondly at my days in a large corporation. I was nestled in both my own office or cubicle and a thick, fluffy, layered hierarchy of management. It was a joke to us then, but in a big company a smart person could get by with hardly getting *anything* done. In most cases, if a project didn’t get done, there were enough people sharing the blame at enough layers that it was hard to figure out where things went wrong. And that’s just for failures. If things took longer than they could have, the complexity of the organization obscured the reasons to a point that nobody really had a clue how long any project should take to get done.
 
-В напряженные моменты, я с любовью вспоминаю на славные деньки в крупной компании.
-
+В напряженные моменты, я с любовью вспоминаю на славные деньки в крупной компании. Я был укрыт от невзгод в стенах собственного кабинета или кубикла, в окружении густой и пушистой многоуровнеой иерархии менеджмента. Смешно сказать, но в крупной компании можно выйти сухим их воды из *практически* любой ситуации. Для этого нужно лишь немного смекалки. В большинстве случаев, вина за провал проекта размазывается ровным слоем по всем уровням менеджента, после чего нет никакой возможности понять, в какой же момент дела пошли наперекосяк. И это только, если мы говорим об **откровенных** провалах. Срывы сроков стали настолько повседневным явлением, что врятли кто-то *вообще* представляет столько времени может занять тот или иной проект.
 
 So, on a day when you don’t feel like really putting the pedal to the
 metal, a big company job affords you the opportunity to sit back and,
 say, browse the Web for a while. Or go home early. Or take a “sick day.”
 For all I complained about big company life, it definitely had its perks.
+
+А в те дни когда вы не чуствуете прилива нежных чувств к упорному труду за клавиатурой, можно просто откинуться на спинку кресла и зависнуть ВКонтакте... или свалить домой пораньше... или прикинуться <s>мертвым немнем</s> *больным*. Короче, жизнь в большой компании дарит свои радости, что бы там не говорили.
 
 The problem is that the safety blanket of corporate hierarchy slows you
 down. If you can hide behind the shield of mediocrity that most corpo-
