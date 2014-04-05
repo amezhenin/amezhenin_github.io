@@ -28,18 +28,9 @@ The problem is that the safety blanket of corporate hierarchy slows you down. If
 
 17. Если вдруг вас эта зараза обошла стороной, то загляните [сюда](http://developer-life.com/). Я мно-о-ого часов там проржал.
 
-In this way, a big company makes a wonderful place to go and semi-
-retire for a while if you’re burned out. But if you’re striving to be
-remarkable (which you are!), a big company is a hard place to get into
-the right groove in the same way that a bakery is a bad place to go to
-try to work off your love handles. The solution? Go independent!
-You have a set of skills. You’ve honed them. You know what you’re
-worth. Becoming an independent contractor is one of the ultimate tests.
-You have no bureaucracy to hide behind. You are directly accountable
-to the people paying the bills. The idea that you are providing a service
-becomes directly apparent in everything you do. There is no team to
-share the blame when you do things wrong. It’s only you, your exper-
-tise, and your ability to execute.
+In this way, a big company makes a wonderful place to go and semi-retire for a while if you’re burned out. But if you’re striving to be remarkable (which you are!), a big company is a hard place to get into the right groove in the same way that a bakery is a bad place to go to try to work off your love handles. The solution? Go independent! You have a set of skills. You’ve honed them. You know what you’re worth. Becoming an independent contractor is one of the ultimate tests. You have no bureaucracy to hide behind. You are directly accountable to the people paying the bills. The idea that you are providing a service becomes directly apparent in everything you do. There is no team to share the blame when you do things wrong. It’s only you, your expertise, and your ability to execute. 
+
+Таким образом, большая компания это отличное место для того, что бы взять передышку, если ты немного выдохся. Но если ты стремишься заявить о себе как о выдающемся разработчите (а им ты и являешься!), то большая компания непоходящее место, что бы двигатсья в нужном русле, в том же смысле, в котором пекарня - это плохое место, что бы занять мозги. Решение? Стань независимым! У тебя есть навыки, отточенные временем и ты знаешь себе цену. Работа по контракту - это самое серьнзное испытание твоих способностей. Нет никакой бюрократии, за которой можно укрыться. Ты отчитываешься напрямую перед теми же людьми, что присылают тебе чек. Смысл в том, что ты предоставляешь *сервис* начинает отражаться в всем, что ты делаешь. Больше нет никакой команды, что бы разделить вину за провал, если что-то пойдет не так. Есть только ты, твой опыт и способность выполнять поставенные задачи.
 
 Becoming an independent contractor also forces you to learn how to
 market yourself and at the same time tests your choices in domain
