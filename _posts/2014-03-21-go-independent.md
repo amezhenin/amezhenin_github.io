@@ -16,20 +16,18 @@ In stressful times, I often look back fondly at my days in a large corporation. 
 
 В напряженные моменты, я с любовью вспоминаю на славные деньки в крупной компании. Я был укрыт от невзгод в стенах собственного кабинета или кубикла, в окружении густой и пушистой многоуровнеой иерархии менеджмента. Смешно сказать, но в крупной компании можно выйти сухим их воды из *практически* любой ситуации. Для этого нужно лишь немного смекалки. В большинстве случаев, вина за провал проекта размазывается ровным слоем по всем уровням менеджента, после чего нет никакой возможности понять, в какой же момент дела пошли наперекосяк. И это только, если мы говорим об **откровенных** провалах. Срывы сроков стали настолько повседневным явлением, что врятли кто-то *вообще* представляет столько времени может занять тот или иной проект.
 
-So, on a day when you don’t feel like really putting the pedal to the
-metal, a big company job affords you the opportunity to sit back and,
-say, browse the Web for a while. Or go home early. Or take a “sick day.”
-For all I complained about big company life, it definitely had its perks.
+So, on a day when you don’t feel like really putting the pedal to the metal, a big company job affords you the opportunity to sit back and, say, browse the Web for a while. Or go home early. Or take a “sick day.”
+For all I complained about big company life, it definitely had its perks. 
 
-А в те дни когда вы не чуствуете прилива нежных чувств к упорному труду за клавиатурой, можно просто откинуться на спинку кресла и зависнуть ВКонтакте... или свалить домой пораньше... или прикинуться <s>мертвым немнем</s> *больным*. Короче, жизнь в большой компании дарит свои радости, что бы там не говорили.
+А в те дни когда вы не чуствуете прилива нежных чувств к упорному труду за клавиатурой, можно просто откинуться на спинку кресла и зависнуть ВКонтакте... или свалить домой пораньше... или прикинуться <s>мертвым немцем</s> *больным*. Короче, жизнь в большой компании дарит свои радости, что бы там не говорили.
 
-The problem is that the safety blanket of corporate hierarchy slows you
-down. If you can hide behind the shield of mediocrity that most corpo-
-rate divisions wield, there’s not much incentive to excel. Even those of
-us who are generally well meaning are tempted by the restful oasis of
-YouTube or our favorite collection of web comics. 17
-
+The problem is that the safety blanket of corporate hierarchy slows you down. If you can hide behind the shield of mediocrity that most corporate divisions wield, there’s not much incentive to excel. Even those of us who are generally well meaning are tempted by the restful oasis of YouTube or our favorite collection of web comics. 17
 > 17\. If you happen to be looking for one, try http://toothpastefordinner.com. I’ve giggled away many an hour there.
+
+Но проблема в том, что лежа на корпоративной "перине" легко обленится и заплыть жирком. Нет никакого стимула *выделяться из толпы*, если ты можешь укрыться за щитом всеобщей посредственности. Даже самые благонамеренные из нас не застрахованы от цепких чар YouTube или любимой коллекции комиксов.
+
+
+
 
 In this way, a big company makes a wonderful place to go and semi-
 retire for a while if you’re burned out. But if you’re striving to be
