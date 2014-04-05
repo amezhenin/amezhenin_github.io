@@ -26,8 +26,7 @@ The problem is that the safety blanket of corporate hierarchy slows you down. If
 
 Но проблема в том, что лежа на корпоративной "перине" легко обленится и заплыть жирком. Нет никакого стимула *выделяться из толпы*, если ты можешь укрыться за щитом всеобщей посредственности. Даже самые благонамеренные из нас не застрахованы от цепких чар YouTube или любимой коллекции комиксов.
 
-
-
+17. Если вдруг вас эта зараза обошла стороной, то загляните [сюда](http://developer-life.com/). Я мно-о-ого часов там проржал.
 
 In this way, a big company makes a wonderful place to go and semi-
 retire for a while if you’re burned out. But if you’re striving to be
