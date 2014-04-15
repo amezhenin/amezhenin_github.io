@@ -40,22 +40,10 @@ You also have to decide how much you’re worth paying. Does what you do cost $5
 
 Тебе придется определиться с тем, сколько ты стоишь. Стоит ли твоя работа 1000 рублей в час? Или может все 5000? Как ты будешь оплачивать счета? Стоишь ли ты на самом деле так же высоко, как о себе думал?
 
-Going independent is hard. It puts all your skills as a professional to
-the test. You might not be ready for it yet. The good news is you don’t
-have to go all the way. Consider it a personal development project,
-and put yourself in the market in your spare time. Set a goal to land a
-contract at a certain rate and finish it with a happy customer. Work on it
-at night or on the weekends (but please don’t work on it in your cubicle
-at your day job!). You’ll learn a lot without losing your safety net. Worst
-case, you’ll overwork yourself for a few weeks, fail at one project, and
-be sent back to your comfortable cubicle with a new sense of appreciate
-for your job. The best case is that you are wildly successful, love the
-work, and set yourself on a new path toward career satisfaction and
-financial reward.
+Going independent is hard. It puts all your skills as a professional to the test. You might not be ready for it yet. The good news is you don’t have to go all the way. Consider it a personal development project, and put yourself in the market in your spare time. Set a goal to land a contract at a certain rate and finish it with a happy customer. Work on it at night or on the weekends (but please don’t work on it in your cubicle at your day job!). You’ll learn a lot without losing your safety net. Worst case, you’ll overwork yourself for a few weeks, fail at one project, and be sent back to your comfortable cubicle with a new sense of appreciate for your job. The best case is that you are wildly successful, love the work, and set yourself on a new path toward career satisfaction and financial reward. 
 
-Reviewer Sammy Larbi suggests another alternative to going indepen-
-dent. If you currently work for a big company, consider joining a small
-one. If you work for an established company, try a startup. In a small
-startup, you can get the best of both worlds: a full-time job with a salary
-and the challenge of being pitted directly against the unfiltered prob-
-lems of your business.
+Стать незаисимым подрядчиком тяжело. Это подвергает серьезной проверке все твои навыки, как профессионала. Возможно, что ты еще не подготовлен к такой проверке, но хорошая новость в том, что тебе не обязательно очертя голову менять свою карьеру. Начни это как персональный проект и попробуй свои силы на этом рынке в свободное от основной работы время. Задайся целью завершить проект с определенной скоростью и получить хороший отзыв от заказчика. Работай над ним ночами или по выходным (но только не работай над ним, сидя в офисе!). Ты многому сможешь научиться не выходя из своей зоны комфорта. В худьшем случае, ты перегрузишь себя на несколько недель, в лучшем - ты будешь иметь огромный успех, полюбишь новую работу и встанешь на путь удовлетворенности своей карьерой и финансовым вознаграждением. 
+
+Reviewer Sammy Larbi suggests another alternative to going independent. If you currently work for a big company, consider joining a small one. If you work for an established company, try a startup. In a small startup, you can get the best of both worlds: a full-time job with a salary and the challenge of being pitted directly against the unfiltered problems of your business.
+
+Рецензент Самми Ларби (Sammy Larbi) предложил альтернативный вариант того, как стать независимым. Если ты сейчас работаешь в крупной компании, подумай о том, чтобы поработать в маленькой. Если ты  работаешь в устоявшейся компании, попробуй поработать в стартапе. Работая в стартапе, ты сможешь иметь и полную занятость с постоянной зарплатой, и с головой окунуться во всевозможные проблемы сомостоятельного бизнеса.
