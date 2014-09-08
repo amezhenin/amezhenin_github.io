@@ -28,3 +28,4 @@ object Test {
 }
 
 
+http://blog.fogus.me/2009/03/26/baysick-a-scala-dsl-implementing-basic/
