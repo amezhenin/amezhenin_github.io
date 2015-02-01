@@ -21,13 +21,14 @@ tags: [english, travelling]
 
 Hey there! 
 
-It me again and today is my last day in Tbilisi, Georgia and I'll fly to Bangkok today. I spent here two and a half month and started to like this place. While I was here, I took took part in a number of events:
+It me again and today is my last day in Tbilisi, Georgia and I'll fly to Bangkok today. I spent here two and a half month and started to like this place. While I was here, I took part in a number of events and met several people:
 
 * I gave a talk on the [Tbilisi MongoDB User Group](http://www.meetup.com/Tbilisi-MongoDB-User-Group/) meetup. I was very glad to be invited on this event. It took place in [Javakhishvili Tbilisi State University](http://www.tsu.edu.ge/en/).
 * I was on [HackerNest](http://www.meetup.com/HackerNestTBS/) meetup, where I met a lot of local developers. There is not so much software devs in Tbilisi, so basically everyone knows each other.
 * I was trying my luck on Gudauri ski resort.
 * I met a lot of expats from all over the world on [Internations events](http://www.internations.org/activity-group/7321). Big thanks to [Tata Shengelia](https://www.facebook.com/tata.shengelia) for organizing this events. That was amazing!
 * And I fell in love with georgian cuisine. I'll miss it very much in Bangkok. *(btw, wine here is absolutly great, you have to try it! I bet you can find it in your local store)*
+* Special thanks to [Kahaber Mikaia](https://www.facebook.com/kaxabermikaia), who have shown me the city and helped me with finding an apartment.
 
 I also made some inspiring discoveries here. Most of georgians know russian language very well. I had almost no language barrier here. A lot of georgians do want to have stronger and better relations with Russia. And not only with Russia, they are more than happy to see people from Ukraine, Belorus and other neighbour countries.
 
