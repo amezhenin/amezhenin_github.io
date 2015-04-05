@@ -33,3 +33,5 @@ http://blog.fogus.me/2009/03/26/baysick-a-scala-dsl-implementing-basic/
 http://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/
 
 https://business.tutsplus.com/courses/freelance-bootcamp
+
+http://www.toptal.com/freelance/a-digital-nomad-adventure-traveling-with-hacker-paradise/
