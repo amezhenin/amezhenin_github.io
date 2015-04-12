@@ -35,3 +35,6 @@ http://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/
 https://business.tutsplus.com/courses/freelance-bootcamp
 
 http://www.toptal.com/freelance/a-digital-nomad-adventure-traveling-with-hacker-paradise/
+
+
+* http://www.fastcoexist.com/3043858/world-changing-ideas/the-science-of-why-you-should-spend-your-money-on-experiences-not-thing  We are the sum total of our experiences
