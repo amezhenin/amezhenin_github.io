@@ -5,7 +5,7 @@ description: ""
 category: personal
 tags: [english, travelling]
 ---
-{% include JB/setup %}
+
 
 <style>
     .fig {

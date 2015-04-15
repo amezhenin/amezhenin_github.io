@@ -5,7 +5,7 @@ description: ""
 category: mongodb
 tags: [mongodb, snippets]
 ---
-{% include JB/setup %}
+
 
 В MongoDB существует уникальный параметр запроса [$maxScan](http://docs.mongodb.org/manual/reference/operator/maxScan/), который я не встречал в других БД. Он имеет следующий синтаксис:
 

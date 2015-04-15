@@ -5,7 +5,7 @@ description: ""
 category: devops
 tags: [fabric, devops]
 ---
-{% include JB/setup %}
+
 
 <link rel="stylesheet" href="/pygments.css"/>
 

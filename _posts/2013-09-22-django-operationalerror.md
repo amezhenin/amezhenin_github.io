@@ -5,7 +5,7 @@ description: ""
 category: django
 tags: [django, deploy, gunicorn]
 ---
-{% include JB/setup %}
+
 
 <link rel="stylesheet" href="/pygments.css"/>
 
