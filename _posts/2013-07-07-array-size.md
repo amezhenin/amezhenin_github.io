@@ -5,7 +5,7 @@ description: ""
 category: mongodb
 tags: [mongodb, aggregation framework, snippets]
 ---
-{% include JB/setup %}
+
 
 В текущей версии MongoDB(*2.4*) нет оператора для получения размера массива внутри `pipeline`a. Судя по статусу [задачи в jira](https://jira.mongodb.org/browse/SERVER-4899), эта проблема должна решиться в скором времени, а пока что придется воспользоваться временным решением(aka *костылем*). 
 

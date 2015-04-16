@@ -5,7 +5,7 @@ description: ""
 category: celery
 tags: [celery, python]
 ---
-{% include JB/setup %}
+
 
 <link rel="stylesheet" href="/pygments.css"/>
 

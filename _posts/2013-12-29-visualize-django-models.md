@@ -5,7 +5,7 @@ description: ""
 category: django
 tags: [django, python]
 ---
-{% include JB/setup %}
+
 
 
 Я уже давно использую `django-extensions + graphviz` для визуализации Django моделей. Этим рецептом я и хотел сегодня поделиться, потому что в [интернетах](http://lurkmore.to/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%D1%8B) этот набор команд мне всегда приходится собирать по частям.

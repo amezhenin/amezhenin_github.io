@@ -5,7 +5,7 @@ description: ""
 category: personal
 tags: [english]
 ---
-{% include JB/setup %}
+
 
 Hey there! It's been a while since I wrote the last post in this blog and I want to change that today. 
 

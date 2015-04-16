@@ -5,7 +5,7 @@ description: ""
 category: python
 tags: [python, open source]
 ---
-{% include JB/setup %}
+
 
 <img style="float:right;margin:0 10px 0 10px;height: 230px;" src="/images/kill_bugs.jpg" alt="kill_bugs"/>
 

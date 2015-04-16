@@ -5,7 +5,7 @@ description: ""
 category: python
 tags: [python, eclipse, pylint]
 ---
-{% include JB/setup %}
+
 
 <style>
     .fig {

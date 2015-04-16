@@ -1,11 +1,10 @@
 ---
 layout: index
-title: The blog of Artem Mezhenin
+title: Blog
 tagline:
 published: true
+group: navigation
 ---
-
-{% include JB/setup %}
 
   <style>
    span:empty {
