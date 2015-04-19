@@ -1,34 +1,442 @@
 <!DOCTYPE html>
-<html lang="en">
-
-
-<head>
+<html lang="en" class=" js rgba backgroundsize cssanimations cssgradients csstransforms fontface">
+  <!--<![endif]-->
+  <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="assets/index/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/index/index.css">
+    <title>Artem Mezhenin personal website</title>
 
-    <!--<link rel="stylesheet" href="assets/index/bootstrap/css/bootstrap-theme.min.css">-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Artem Mezhenin personal website">
+   
 
+    <link rel="stylesheet" href="assets/index/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/index/css/animate.min.css">
+    <link href="assets/index/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/index/css/main.css">
+    <link rel="stylesheet" href="assets/index/css/home.css">
+    <link rel="stylesheet" href="assets/index/css/overrides.css">
+    <link rel="stylesheet" href="assets/index/css/nojs.css">
 
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="assets/index/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/index/js/jquery.min.js"></script>
+    <script src="assets/index/js/viewportchecker.js"></script>
+    <script src="assets/index/js/typed.min.js"></script>
+    <script src="assets/index/js/pushy.min.js"></script>
+    <script src="assets/index/js/modernizr.js"></script>
+    <script src="assets/index/js/main.js"></script>
 
-
-    <title>Artem Mezhenin personal page</title>
 </head>
-
-
 <body>
 
-<section id="intro">
-    <div class="container fill vertical-center">
-        <div class="brand">
-            <h1>Hello, I am Artem</h1>
-            <h2>I'm software developer</h2>
-            <h3>This is my personal <a href= "/blog.html" >blog&#10148;</a></h3>
+<section class="navigation">
+    <a id="navicon" class="animated fadeInLeft closed menu-btn"></a>
+
+    <div class="nav pushy pushy-left">
+        <ul>
+            <li>
+                <a class="introduction" href="#">
+                    <i class="fa fa-angle-up"></i>Introduction
+                </a>
+            </li>
+
+            <li>
+                <a class="about" href="#">
+                    <i class="fa fa-user"></i>Who I am
+                </a>
+            </li>
+
+            <li>
+                <a class="interests" href="#">
+                    <i class="fa fa-code"></i>What I do
+                </a>
+            </li>
+
+            <li>
+                <a class="work" href="#">
+                    <i class="fa fa-suitcase"></i>What I've done
+                </a>
+            </li>
+
+            <li>
+                <a class="contact" href="#">
+                    <i class="fa fa-paper-plane"></i>Contact
+                </a>
+            </li>
+        </ul>
+
+        <div class="dash"></div>
+
+        <ul>
+            <li>
+                <a href="/blog.html"><i class="fa fa-book"></i>Blog</a>
+            </li>
+
+        </ul>
+    </div>
+</section>
+
+
+<div class="site-overlay"></div>
+
+
+<section id="introduction" class="bw">
+    <div class="small-nav nav">
+        <ul>
+            <li>
+                <a class="introduction" href="#introduction">Intro</a>
+            </li>
+
+            <li>
+                <a class="about" href="#about">About</a>
+            </li>
+
+            <li>
+                <a class="interests" href="#interests">Interests</a>
+            </li>
+
+            <li>
+                <a class="work" href="#work">Work</a>
+            </li>
+
+            <li>
+                <a class="contact" href="#contact">Contact</a>
+            </li>
+
+            <li>
+                <a class="blog" href="/blog.html">Blog</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="brand">
+        <h1 class="animated fadeInUp">Hello, I am Artem</h1>
+        <h2 class="animated fadeInUp">I'm software developer</h2>
+        <h2 class="animated fadeInUp">
+            I've worked with <span class="skills"><span class="element"></span></span>
+        </h2>
+    </div>
+
+    <div class="chevron animated fadeInUp">
+        <div>Scroll down</div>
+        <i class="flaticon-bottom4 down"></i>
+    </div>
+
+
+</section>
+
+
+
+
+<section id="about">
+    <div class="container">
+        <div class="col-md-8 col-md-offset-2 center">
+            <img class="profile-pic" src="http://www.gravatar.com/avatar/2e86dc5eb010bc25f2294e2386086a65?s=250">
+
+            <p><h1>Hi there!</h1></p>
+
+            <div class="dash" ></div>
+
+
+            <p class="justify">My name is Artem.</p>
+
+
+            <p class="justify">I'm software developer with mathematical background.
+                I'm very competent in web development, database design and message queues.</p>
+
+            <p class="justify">I worked on several <i>intelligent</i> and <i>data-centric</i> web applications, and
+                have experience in design and optimization of high-loaded systems.</p>
+
+            <p class="justify">In free time I make small contributions at
+                <a href="https://github.com/amezhenin">Github</a>,
+                <a href="http://stackoverflow.com/users/1325846/amezhenin">StackOverflow</a>
+                and hack on random stuff.
+                I love to learn new languages, algorithms, databases and
+                participate in programming contests. I also write to my own <a href="/blog.html">blog</a>,
+                when I have something to share with community.</p>
+
+            <p class="justify">I'm interested in:</p>
+            <p class="bullet">&#8226; Web development, databases</p>
+            <p class="bullet">&#8226; Machine learning and data analysis</p>
+            <p class="bullet">&#8226; Algorithms, data structures</p>
+            <p class="bullet">&#8226; Distributed systems design, highload systems</p>
+
+            <div class="dash"></div>
         </div>
     </div>
 </section>
+
+
+
+<section id="interests">
+    <div class="container">
+
+        <h1 class="tabloid">What I do</h1>
+
+        <div class="row">
+            <div class="concealed visible animated fadeInUp">
+                <div class="flaticon">
+                    <i class="flaticon-codings1"></i>
+                </div>
+
+                <h3>Development</h3>
+
+                <div class="dash"></div>
+
+                <p><b>Programming:</b> <br/>
+                    Python, Scala, JavaScript, Node.js, Go(golang)</p>
+                <p><b>Frameworks and libraries:</b><br/>
+                    Django, Celery, AngularJS, Play, Akka, pandas, IPython, ExpressJS, Bootstrap, Flask, ZeroMQ, RequireJS</p>
+                <p><b>Databases:</b> <br/>
+                    MongoDB, PostgreSQL, ElasticSearch, Redis, MySQL, RabbitMQ, Memcache, sqlite</p>
+
+                <div class="dash"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column col-md-6 concealed visible animated fadeInUp">
+                <div class="flaticon">
+                    <i class="flaticon-bulb11"></i>
+                </div>
+
+                <h3>Open source</h3>
+
+                <div class="dash"></div>
+
+                <p class="justify">
+                    I <span class="heart"></span> open source and everything about it.
+                    I have contributed to:
+
+                    <a href="https://github.com/tomchristie/django-rest-framework">Django REST framework</a>,
+                    <a href="https://github.com/celery/celery">Celery</a>,
+                    <a href="https://github.com/Flar49/passionate-programmer-translation">Russian translation</a> of
+                    <a href="http://www.amazon.com/Passionate-Programmer-Remarkable-Development-Pragmatic/dp/1934356344/">
+                        Passionate Programmer</a>,
+                    <a href="https://github.com/jeffknupp/review">github.com/jeffknupp/review</a> and some other.
+                </p>
+
+
+                <div class="dash"></div>
+            </div>
+
+            <div class="column col-md-6 concealed visible animated fadeInUp">
+                <div class="flaticon">
+                    <i class="flaticon-globe14"></i>
+                </div>
+
+                <h3>The World</h3>
+
+                <div class="dash"></div>
+
+                <div class="justify">
+                    <p>
+                        I like to travel and regularly visit new places. Contact me on <a href="https://www.facebook.com/artem.mezhenin">Facebook</a>,
+                        I would be glad to hear about your country and share my experience about places where I've been.
+                    </p>
+                    <p>
+                        I know English, Russian and Ukrainian very well, and now I'm learning Spanish and Thai.
+                    </p>
+                    <p>
+                        I also help entrepreneurs in developing countries to start their own business
+                        via <a href="https://www.kiva.org/">Kiva.org</a>
+                    </p>
+                </div>
+
+                <div class="dash"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="work">
+    <div class="container">
+        <h1>Projects</h1>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <p><img src="assets/index/images/seventhsense.jpg" class="img-responsive pull-left"></p>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <p>
+                    <strong>Seventh Sense</strong> brings data science and advanced machine learning to the customer
+                    engagement process to help our users build better relationships and sell more with less effort.
+                </p>
+                <p>
+                    <strong>Role: </strong> Back- and frontend development
+                </p>
+                <p>
+                    <strong>Stack: </strong> Scala, AngularJS, Play, ElasticSearch
+                </p>
+            </div>
+        </div>
+
+        <div class="hz-line"></div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <p><img src="assets/index/images/wiserhealth.png" class="img-responsive pull-left"></p>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <p>
+                    <strong>WiserHealth</strong>&nbsp;–&nbsp;Learn from other people’s experiences to make better health decisions.
+                </p>
+                <p>
+                    <strong>Role: </strong> Backend development and database design
+                </p>
+                <p>
+                    <strong>Stack: </strong> Python, Django, MongoDB, Openshift
+                </p>
+            </div>
+        </div>
+
+        <div class="hz-line"></div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <p><img src="assets/index/images/metabar.jpg" class="img-responsive pull-left"></p>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <p>
+                    <strong>Metabar</strong>&nbsp;–&nbsp;Constructor for browser toolbars and extensions.
+                </p>
+                <p>
+                    <strong>Role: </strong> Backend development, database design, performance tuning, deployments
+                </p>
+                <p>
+                    <strong>Stack: </strong> Python, Django, Flask, MongoDB, Celery, MySQL
+                </p>
+            </div>
+        </div>
+
+        <div class="hz-line"></div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <p><img src="assets/index/images/boatwatch.png" class="img-responsive pull-left"></p>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <p>
+                    <strong>BoatWatch</strong>&nbsp;–&nbsp;Web application for tracking land and water transport.
+                </p>
+                <p>
+                    <strong>Role: </strong> Backend development, database design, deployments
+                </p>
+                <p>
+                    <strong>Stack: </strong> Python, Django, MongoDB, PostgreSQL
+                </p>
+            </div>
+        </div>
+
+        <div class="hz-line"></div>
+
+        <div class="row center">
+            <a class="contact" href="/assets/index/resume_mezhenin.pdf">
+                More <i class="fa fa-download"></i>
+            </a>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+</section>
+
+
+<section id="contact">
+    <div class="container">
+        <div class="paperplane concealed visible animated bounceInDown"><i class="flaticon-paper41"></i></div>
+
+        <h1>Are you interested <div>?</div></h1>
+        <p>Whether you have an interesting project or
+            just want to say hi, feel free to shoot me a message.</p>
+
+        <a class="contact" href="mailto:a.mezhenin@gmail.com">
+            Say Hi!<i class="flaticon-speech39"></i>
+        </a>
+    </div>
+</section>
+
+
+<section id="footer">
+    <div class="container">
+        <h3>Follow me</h3>
+
+        <ul>
+            <li class="github">
+                <a href="https://github.com/amezhenin">
+                    <i class="fa fa-github"></i>
+                    <p>GitHub</p>
+                </a>
+            </li>
+
+            <li class="linkedin">
+                <a href="http://www.linkedin.com/in/mezhenin">
+                    <i class="fa fa-linkedin"></i>
+                    <p>Linkedin</p>
+                </a>
+            </li>
+
+            <li class="stack-overflow">
+                <a href="http://stackoverflow.com/users/1325846/amezhenin">
+                    <i class="fa fa-stack-overflow"></i>
+                    <p>stack<b>overflow</b></p>
+                </a>
+            </li>
+
+            <li class="facebook">
+                <a href="https://www.facebook.com/artem.mezhenin">
+                    <i class="fa fa-facebook"></i>
+                    <p>Facebook</p>
+                </a>
+            </li>
+
+            <li class="codechef">
+                <a href="http://www.codechef.com/users/amezhenin">
+                    <i class="fa fa-code"></i>
+                    <p>CodeChef</p>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</section>
+
+<script>
+    $(function(){
+        $(".element").typed({
+            strings: ["Python", "Scala", "JavaScript", "Django", "Celery", "MongoDB", "Play", "AngularJS", "NodeJS", "PostgreSQL"],
+            typeSpeed: 0,
+            // time before typing starts
+            startDelay: 2,
+            // backspacing speed
+            backSpeed: 0,
+            // time before backspacing
+            backDelay: 1500,
+            // loop
+            loop: true,
+            // false = infinite
+            loopCount: false,
+            // show cursor
+            showCursor: true,
+            // character for cursor
+            cursorChar: "|"
+
+        });
+    });
+</script>
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42282364-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
 
 </body>
 </html>
