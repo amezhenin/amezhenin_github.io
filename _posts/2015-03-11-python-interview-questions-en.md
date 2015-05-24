@@ -3,7 +3,7 @@ layout: post
 title: "Python interview questions"
 description: ""
 category: python
-tags: [python, interview, english]
+tags: [popular, python, interview, english]
 published: false
 ---
 

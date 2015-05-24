@@ -3,7 +3,7 @@ layout: post
 title: "Чед Фавлер. Стань независимым"
 description: ""
 category: translation
-tags: [translation, перевод]
+tags: [popular, translation, перевод]
 ---
 {% include JB/setup %}
 

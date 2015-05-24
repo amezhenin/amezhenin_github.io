@@ -3,7 +3,7 @@ layout: post
 title: "Профилирование MongoDB. Часть 2"
 description: ""
 category: mongodb
-tags: [mongodb, profiling, aggregation framework, devops]
+tags: [popular, mongodb, profiling, aggregation framework, devops]
 ---
 {% include JB/setup %}
 

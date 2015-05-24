@@ -3,7 +3,7 @@ layout: post
 title: "О чем спросить питониста"
 description: ""
 category: python
-tags: [python, interview]
+tags: [popular, python, interview]
 ---
 {% include JB/setup %}
 
