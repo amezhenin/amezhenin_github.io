@@ -23,7 +23,6 @@ tags: [mongodb, profiling, devops]
 }
 </style>
 
-<link rel="stylesheet" href="/pygments.css"/>
 
   <p class="fig"><img src="/images/monitoring.jpg" alt="monitoring" style="width: 230px;" align='right'/></p>
 [MongoDB](http://www.mongodb.org/) это замечательная *NoSQL* база данных, которая дает большую гибкость при разработке приложений за счет своего документо-ориентированного способа представления данных. В этой статье я опишу логирование и профилирования ваших решений на базе MongoDB.

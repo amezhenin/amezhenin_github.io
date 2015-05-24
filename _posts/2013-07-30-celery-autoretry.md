@@ -7,7 +7,6 @@ tags: [celery, python]
 ---
 
 
-<link rel="stylesheet" href="/pygments.css"/>
 
 В [Celery](http://www.celeryproject.org/) есть возможность перезапускать задачи, в случае неудачного выполнения. Для этого существует функция [retry](http://docs.celeryproject.org/en/latest/reference/celery.app.task.html#celery.app.task.Task.retry), работу которой можно понять из следующего примера:
 

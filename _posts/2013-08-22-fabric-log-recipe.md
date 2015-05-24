@@ -7,7 +7,6 @@ tags: [fabric, devops]
 ---
 
 
-<link rel="stylesheet" href="/pygments.css"/>
 
 ## Что такое Fabric?
 

@@ -6,7 +6,6 @@ category: python
 tags: [python, interview]
 ---
 {% include JB/setup %}
-<link rel="stylesheet" href="/pygments.css"/>
 
 ## Введение
 

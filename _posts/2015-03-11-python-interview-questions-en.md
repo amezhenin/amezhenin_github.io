@@ -7,7 +7,6 @@ tags: [python, interview, english]
 published: false
 ---
 
-<link rel="stylesheet" href="/pygments.css"/>
 
 *About one year ago I wrote about [Python interview questions](http://amezhenin.ru/python/interview-questions.html) and this post gain a lot of popularity, so I decide to trianslate it in English.*
 

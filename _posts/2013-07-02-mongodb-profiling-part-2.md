@@ -24,7 +24,6 @@ tags: [mongodb, profiling, aggregation framework, devops]
 </style>
 
 
-<link rel="stylesheet" href="/pygments.css"/>
 
 <p class="fig">
 <a href="http://www.flickr.com/photos/advancedphotonsource/5941453764/" target="_blank">
