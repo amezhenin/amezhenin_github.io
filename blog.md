@@ -21,7 +21,8 @@ group: navigation
     <td><li><span>{{ post.date | date: "%B" }}&nbsp;</span></li></td>
     <td><span>{{ post.date | date: "%Y" }}</span></td>
     <td>&raquo;&nbsp;</td> 
-    <td><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.tags | popular: post.title }}</a></td>
+    <!-- <td><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.tags | popular: post.title }}</a></td> -->
+    <td><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></td>
     <td></td>
   </tr>
   {% endfor %}
