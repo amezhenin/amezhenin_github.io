@@ -17,14 +17,21 @@ group: navigation
 <table>
   
   {% for post in site.posts %}
+
+  {% if post.tags[0] == "popular" %}  
+  <tr style="font-weight:800;">
+  {% else %}
   <tr>
+  {% endif %}
+
     <td><li><span>{{ post.date | date: "%B" }}&nbsp;</span></li></td>
     <td><span>{{ post.date | date: "%Y" }}</span></td>
     <td>&raquo;&nbsp;</td> 
-    <td><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.tags | popular: post.title }}</a></td>
-    <!-- <td><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></td> -->
+    <td><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></td>
     <td></td>
   </tr>
+
+
   {% endfor %}
 </table>
 </ul>
