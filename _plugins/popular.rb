@@ -1,4 +1,4 @@
-module Popupal
+module Popular
     def popular(tags, text)
         if tags.include? "popular"
             "<b>" +
@@ -10,4 +10,4 @@ module Popupal
     end
 end
 
-Liquid::Template.register_filter(Popupal)
+Liquid::Template.register_filter(Popular)

@@ -7,8 +7,6 @@ tags: [popular, translation, перевод]
 ---
 {% include JB/setup %}
 
-<img src="/images/books/book_30.jpeg" style="width: 25%;" align='right' style="padding:10px"/>
-
 *Перед вами перевод одной из глав книги Чеда Фавлера, [The Passionate Programmer](http://www.amazon.com/The-Passionate-Programmer-Remarkable-Development/dp/1934356344). Саму книгу, я могу смело рекомендовать даже тем, кто не относится напрямую к разработке программного обеспечения.*
 
 ---
