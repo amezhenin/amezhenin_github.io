@@ -1,17 +1,19 @@
 ---
 layout: post
-title: "HTTP: The Fundamentals"
+title: "HTTP: The Fundamentals. Part 1"
 description: ""
-category: asdf
-tags: [popular]
-published: false
+category: web
+tags: [popular, web, http]
+published: true
 ---
 {% include JB/setup %}
+
+*This is attempt to resurrect a great post about HTTP protocol originally posted in [pypix.com](http://pypix.com) blog. That was a great resource, but it's been down for awhile. Hope you'll enjoy it.*
 
 <p class="fig">
 <img src="/images/pypix/http/http.jpg" style="width: 100%;" align='center'/></p>
 
-# HTTP: The Fundamentals
+# HTTP: The Fundamentals. Part 1
 
 HTTP stands for Hypertext Transfer Protocol. It’s a stateless, application-layer protocol for communicating between distributed systems, and is the foundation of the modern web. As a web developer, we all must have a strong understanding of this protocol.
 
@@ -137,3 +139,132 @@ It’s mandatory to place a new line between the message headers and body. The m
 The message body may contain the complete entity data, or it may be piecemeal if the chunked encoding (`Transfer-Encoding: chunked`) is used. All HTTP/1.1 clients are required to accept the `Transfer-Encoding` header.
 
 ### General Headers
+
+There are a few headers (general headers) that are shared by both request and response messages:
+
+    general-header = Cache-Control            
+                   | Connection        
+                   | Date              
+                   | Pragma            
+                   | Trailer           
+                   | Transfer-Encoding 
+                   | Upgrade           
+                   | Via               
+                   | Warning
+    
+We have already seen some of these headers, specifically `Via` and `Transfer-Encoding`. We will cover `Cache-Control` and `Connection` in second section.
+
+* `Via` header is used in a TRACE message and updated by all intermittent proxies and gateways
+
+* `Pragma` is considered a custom header and may be used to include implementation-specific headers. The most commonly used pragma-directive is Pragma: no-cache, which really is Cache-
+Control: no-cacheunder HTTP/1.1. This will be covered in Part 2 of the article.
+
+* The `Date` header field is used to timestamp the request/response message
+
+* `Upgrade` is used to switch protocols and allow a smooth transition to a newer protocol.
+
+* `Transfer-Encoding` is generally used to break the response into smaller parts with the Transfer-Encoding: chunked value. This is a new header in HTTP/1.1 and allows for streaming of response to the client instead of one big payload.
+
+### Entity headers
+
+Request and Response messages may also include entity headers to provide meta-information about the the content (aka Message Body or Entity). These headers include:
+
+    entity-header  = Allow                    
+                   | Content-Encoding  
+                   | Content-Language  
+                   | Content-Length    
+                   | Content-Location  
+                   | Content-MD5       
+                   | Content-Range     
+                   | Content-Type      
+                   | Expires           
+                   | Last-Modified
+                   
+All of the `Content-` prefixed headers provide information about the structure, encoding and size of the message body. Some of these headers need to be present if the entity is part of the message.
+
+The `Expires` header indicates a timestamp of when the entity expires. Interestingly, a *“never expires”* entity is sent with a timestamp of one year into the future. The `Last-Modified` header indicates the last modification timestamp for the entity.
+
+## Request Format
+
+The request message has the same generic structure as above, except for the request line which looks like:
+
+    Request-Line = Method SP URI SP HTTP-Version CRLF
+    Method = "OPTIONS"
+           | "HEAD"  
+           | "GET"  
+           | "POST"  
+           | "PUT"  
+           | "DELETE"  
+           | "TRACE"
+    
+`SP` is the space separator between the tokens. `HTTP-Version` is specified as *“HTTP/1.1”* and then followed by a new line. Thus, a typical request message might look like:
+
+    GET /articles/http-basics HTTP/1.1
+    Host: www.articles.com
+    Connection: keep-alive
+    Cache-Control: no-cache
+    Pragma: no-cache
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    
+Note the request line followed by many request headers. The **Host** header is mandatory for HTTP/1.1 clients. **GET** requests do not have a message body, but **POST** requests can contain the post data in the body.
+
+The request headers act as modifiers of the request message. The complete list of known request headers is not too long, and is provided below. Unknown headers are treated as entity-header fields.
+
+    request-header = Accept                   
+                   | Accept-Charset    
+                   | Accept-Encoding   
+                   | Accept-Language   
+                   | Authorization     
+                   | Expect            
+                   | From              
+                   | Host              
+                   | If-Match          
+                   | If-Modified-Since 
+                   | If-None-Match     
+                   | If-Range          
+                   | If-Unmodified-Since
+                   | Max-Forwards       
+                   | Proxy-Authorization
+                   | Range              
+                   | Referer            
+                   | TE                 
+                   | User-Agent
+
+The `Accept` prefixed headers indicate the acceptable media-types, languages and character sets on the client. `From`, `Host`, `Referer` and `User-Agent` identify details about the client that initiated the request. The `If-` prefixed headers are used to make a request more conditional, and the server returns the resource only if the condition matches. Otherwise, it returns a `304 Not Modified`. The condition can be based on a timestamp or an ETag (a hash of the entity).
+
+## Response Format
+
+The response format is similar to the request message, except for the status line and headers. The status line has the following structure:
+
+    Status-Line = HTTP-Version SP Status-Code SP Reason-Phrase CRLF
+
+* HTTP-Version is sent as `HTTP/1.1`
+* The Status-Code is one of the many statuses discussed earlier.
+* The Reason-Phrase is a human-readable version of the status code.
+
+A typical status line for a successful response might look like so:
+
+    HTTP/1.1 200 OK
+    
+The response headers are also fairly limited, and the full set is given below:
+
+    response-header = Accept-Ranges
+                    | Age
+                    | ETag              
+                    | Location          
+                    | Proxy-Authenticate
+                    | Retry-After       
+                    | Server            
+                    | Vary              
+                    | WWW-Authenticate
+    
+* `Age` is the time in seconds since the message was generated on the server.
+* `ETag` is the MD5 hash of the entity and used to check for modifications.
+* `Location` is used when sending a redirection and contains the new URL.
+* `Server` identifies the server generating the message.
+
+It’s been a lot of theory upto this point, so I won’t blame you for drowsy eyes. In the next sections, we will get more practical and take a survey of the tools, frameworks and libraries.
+
+
+
+
