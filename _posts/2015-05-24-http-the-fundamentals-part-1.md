@@ -3,7 +3,7 @@ layout: post
 title: "HTTP: The Fundamentals. Part 1"
 description: ""
 category: web
-tags: [popular, web, http]
+tags: [popular, web, http, fundamentals, introduction, protocols]
 published: true
 ---
 {% include JB/setup %}
