@@ -38,3 +38,7 @@ http://www.toptal.com/freelance/a-digital-nomad-adventure-traveling-with-hacker-
 
 
 * http://www.fastcoexist.com/3043858/world-changing-ideas/the-science-of-why-you-should-spend-your-money-on-experiences-not-thing  We are the sum total of our experiences
+
+* Tutorial: Spark-GPU Cluster Dev in a Notebook http://iamtrask.github.io/2014/11/22/spark-gpu/
+* https://github.com/jrudolph/akka-http-scala-js-websocket-chat/
+* http://pgbovine.net/cpython-internals.htm
