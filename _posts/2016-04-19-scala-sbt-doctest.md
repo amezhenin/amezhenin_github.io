@@ -6,9 +6,8 @@ category: scala
 tags: [scala, programming]
 published: true
 ---
-{% include JB/setup %}
 
-I was going to write this short note on [sbt-doctest](https://github.com/tkawachi/sbt-doctest) for a very long time. Python [doctest](https://docs.python.org/2/library/doctest.html)s are really handy when it comes to testing small _stateless_ function with simple input. They might not be that useful in huge projects, but I've found them ideal for testing algorithmic functions when I was solving different [CodeChef](https://www.codechef.com/) programming contests. 
+I was going to write this short note on [sbt-doctest](https://github.com/tkawachi/sbt-doctest) for a very long time. Python [doctest](https://docs.python.org/2/library/doctest.html)s are really handy when it comes to testing small _stateless_ function with simple input. They might not be that useful in huge projects, but I've found them ideal for testing algorithmic functions when I was solving different [CodeChef](https://www.codechef.com/) programming contests.
 
 I thought, that Scala should have similar tool and I was right. Installation process is trivial, just add couple of lines to `project/plugins.sbt`:
 
@@ -17,9 +16,9 @@ I thought, that Scala should have similar tool and I was right. Installation pro
 
 
    and to `build.sbt`:
-   
+
     doctestWithDependencies := false
-    
+
     libraryDependencies ++= Seq(
       "org.scalatest"  %% "scalatest"  % "2.2.3"  % "test",
       "org.scalacheck" %% "scalacheck" % "1.12.1" % "test"
@@ -30,7 +29,7 @@ and you are ready to go!
 
 ## Example
 
-Here is [one](https://github.com/amezhenin/codechef_problems/blob/master/contests/DTCT2015/virat.scala) of many examples that I have: 
+Here is [one](https://github.com/amezhenin/codechef_problems/blob/master/contests/DTCT2015/virat.scala) of many examples that I have:
 
 {% highlight scala %}
 
@@ -39,7 +38,7 @@ Here is [one](https://github.com/amezhenin/codechef_problems/blob/master/contest
      * GitHub: https://github.com/amezhenin/codechef_problems
      */
     object Main {
-    
+
       /**
        * Checkout https://github.com/amezhenin/codechef_scala_template to test your solutions with sbt-doctest
 {% raw %}       * {{{
@@ -64,7 +63,7 @@ Here is [one](https://github.com/amezhenin/codechef_problems/blob/master/contest
        * }}}
        * */
       def alg(a: List[Int]):BigInt = {
-    
+
         def sol(l: List[Int], acc: BigInt): BigInt = l match {
           case x :: xs =>
             val v = sol(xs, acc)
@@ -72,11 +71,11 @@ Here is [one](https://github.com/amezhenin/codechef_problems/blob/master/contest
             if (v < w) v else w
           case _ => acc
         }
-    
+
         val aa = a.sorted
         sol(aa.tail, aa.head)
       }
-    
+
       def main(args : Array[String]) = {
         val n = readInt()
         val a = readLine().split(" ").map(_.toInt).toList
@@ -84,7 +83,7 @@ Here is [one](https://github.com/amezhenin/codechef_problems/blob/master/contest
         println(res)
       }
     }
-    
+
 {% endhighlight %}
 
 
