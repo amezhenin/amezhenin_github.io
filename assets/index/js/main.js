@@ -8,7 +8,7 @@
     });
     $(".chevron .down").click(function() {
       return $('html, body').animate({
-        scrollTop: $("#about").offset().top
+        scrollTop: $("#_about").offset().top
       }, 1500);
     });
     mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
